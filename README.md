@@ -1,5 +1,5 @@
 # WebSecProbe
-PRIVATE IN DEV REPO FOR WAVS FRAMEWORK
+` THIS REPO/PROJECT IS MADE FOR DEVELOPMENT PURPOSE, YET TO BE DEPLOYED !`
 # Project: WAVS Framework in Python
 ## Objective of subject
 `Web Application Vulnerability Scanning` using `Python` and browser automation libraries allowing efficient `scanning of web application`.
