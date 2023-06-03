@@ -16,3 +16,32 @@ PRIVATE IN DEV REPO FOR WAVS FRAMEWORK
 ## Reporting
 - log response in a structural manner 
 - give a referrence for the value
+--
+## Development Strategy
+### Phases
+  - [x] Planning
+  - [ ] Design
+  - [ ] Moduling
+  - [ ] Coding
+  - [ ] Packaging
+  - [ ] Testing
+  - [ ] Writing documentary
+  - [ ] Advertising
+## Logic
+```
+**Suite**
+    |
+    |
+    v
+**main file** <-------> [needed testing module (like:headermodule)]
+         {collects logs}            /\|
+                                     ||
+                                     |v
+                         [needed submodule(s) , like x-frame...]
+                                    /\|
+     returns response from the server|| sends/post request to server/page
+                                     ||
+                                     |v
+                                   **[server]**
+```
+ 
