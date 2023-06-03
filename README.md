@@ -27,7 +27,7 @@ PRIVATE IN DEV REPO FOR WAVS FRAMEWORK
   - [ ] Testing
   - [ ] Writing documentary
   - [ ] Advertising
-###Logic
+### Logic
 ```
 **Suite**
     |
