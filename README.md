@@ -27,7 +27,7 @@ PRIVATE IN DEV REPO FOR WAVS FRAMEWORK
   - [ ] Testing
   - [ ] Writing documentary
   - [ ] Advertising
-## Logic
+###Logic
 ```
 **Suite**
     |
@@ -44,4 +44,10 @@ PRIVATE IN DEV REPO FOR WAVS FRAMEWORK
                                      |v
                                    **[server]**
 ```
- 
+### Module structure
+- Main modules
+- Scanner modules
+- Utility modules
+- Config modules
+- Report modules
+- External modules
