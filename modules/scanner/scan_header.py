@@ -60,6 +60,13 @@ def scan_header(url):
     else:
         print("\033[91m[-] CORS headers not found.\033[0m")
         print("Reference: [OWASP Cross-Origin Resource Sharing (CORS) Cheat Sheet](https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny)")
+     # JWT (JSON Web Token) Authentication Scanner suggested by Ankit Bhusal
+    if 'Authorization' in headers and 'Bearer' in headers['Authorization']:
+        print("[+] JWT (JSON Web Token) authentication found.")
+        print("Reference: [OWASP JSON Web Token Cheat Sheet] (https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)")
+        # Perform further checks or actions related to JWT authentication
+    else:
+        print("\033[91m[-] JWT (JSON Web Token) authentication not found.\033[0m")
 
     # Members may add other headers scanners...
     # Add more scanners for additional security headers as needed
