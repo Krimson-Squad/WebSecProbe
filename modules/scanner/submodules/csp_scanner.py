@@ -23,8 +23,8 @@ def scan_csp(url):
   source_code = driver.page_source
   # Analyze the source code
   if 'Content-Security-Policy' in source_code:
-    print('CSP is implemented.')
+    print("[+] CSP (Content Security Policy) header  found.")
   else:
-    print('CSP is not implemented.')
+    print("\033[91m[-] CSP (Content Security Policy) header not found.\033[0m")
     # Close the driver
   driver.quit()
