@@ -16,8 +16,8 @@ def scan_header(url):
     [Contributor: Dev. Gautam Kumar]
     """
     import requests
+    from modules.scanner.submodules.csp_scanner import scan_csp
     print("++++++++++++ Scanning header ++++++++++++")
-
     response = requests.get(url)
     headers = response.headers
 
@@ -65,9 +65,10 @@ def scan_header(url):
         print("[+] JWT (JSON Web Token) authentication found.")
         print("Reference: [OWASP JSON Web Token Cheat Sheet] (https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)")
         # Perform further checks or actions related to JWT authentication
+    
     else:
         print("\033[91m[-] JWT (JSON Web Token) authentication not found.\033[0m")
-
+    scan_csp(url=url)
     # Members may add other headers scanners...
     # Add more scanners for additional security headers as needed
 
