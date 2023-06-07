@@ -68,7 +68,7 @@ def scan_header(url):
     
     else:
         print("\033[91m[-] JWT (JSON Web Token) authentication not found.\033[0m")
-    scan_csp(url=url)
+    #scan_csp(url=url)
     # Members may add other headers scanners...
     # Add more scanners for additional security headers as needed
 
