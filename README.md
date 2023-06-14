@@ -1,4 +1,25 @@
 # WebSecProbe
+_Social buttons_
+
+[![krimson-squad - WebSecProbe](https://img.shields.io/static/v1?label=krimson-squad&message=WebSecProbe&color=red&logo=github)](https://github.com/krimson-squad/WebSecProbe "Go to GitHub repo")
+[![stars - WebSecProbe](https://img.shields.io/github/stars/krimson-squad/WebSecProbe?style=social)](https://github.com/krimson-squad/WebSecProbe)
+[![forks - WebSecProbe](https://img.shields.io/github/forks/krimson-squad/WebSecProbe?style=social)](https://github.com/krimson-squad/WebSecProbe)
+
+
+_Repo metadata_
+
+
+[![GitHub tag](https://img.shields.io/github/tag/krimson-squad/WebSecProbe?include_prereleases=&sort=semver&color=red)](https://github.com/krimson-squad/WebSecProbe/releases/)
+[![issues - WebSecProbe](https://img.shields.io/github/issues/krimson-squad/WebSecProbe)](https://github.com/krimson-squad/WebSecProbe/issues)
+
+## Documentation
+
+<div align="center">
+
+[![view - Documentation](https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge)](/docs/ "Go to project documentation")
+
+</div>
+
 ` THIS REPO/PROJECT IS MADE FOR DEVELOPMENT PURPOSE, YET TO BE DEPLOYED !`
 # Project: WAVS Framework in Python
 ## Objective of subject
