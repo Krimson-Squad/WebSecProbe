@@ -3,7 +3,7 @@ from colorama import init, Fore
 from tqdm import tqdm
 from modules.scanner.scan_header import *
 from modules.scanner.scan_sql_injections import *
-
+from modules.scanner.scan_xss import *
 # Initialize colorama
 init(autoreset=True)
 # intro
@@ -37,5 +37,6 @@ def main():
         test_sql_injection(args.url,args.param)
     else:
         test_sql_injection(args.url)
+    scan_xss(args.url)
 if __name__ == "__main__":
     main()
