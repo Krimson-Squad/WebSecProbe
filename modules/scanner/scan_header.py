@@ -16,58 +16,63 @@ def scan_header(url):
     [Contributor: Dev. Gautam Kumar]
     """
     import requests
+    import argparse
+    from colorama import init, Fore
+    from tqdm import tqdm
+    # Initialize colorama
+    init(autoreset=True)
     from modules.scanner.submodules.csp_scanner import scan_csp
-    print("++++++++++++ Scanning header ++++++++++++")
+    print(Fore.GREEN + "++++++++++++ Scanning header ++++++++++++")
     response = requests.get(url)
     headers = response.headers
 
     # Content Security Policy (CSP) Scanner
     if 'Content-Security-Policy' in headers:
-        print("[+] Content-Security-Policy header found.")
+        print(Fore.BLUE+" [+] Content-Security-Policy header found. ")
         # Perform further checks or actions related to CSP
     else:
-        print("\033[91m[-] Content-Security-Policy header not found.\033[0m")
+        print(Fore.RED+" [ - ] Content-Security-Policy header not found.")
         print("Reference: [OWASP Content Security Policy](https://owasp.org/www-project-secure-headers/#content-security-policy)")
 
     # X-XSS-Protection Scanner
     if 'X-XSS-Protection' in headers:
-        print("[+] X-XSS-Protection header found.")
+        print(Fore.BLUE+" [+] X-XSS-Protection header found. ")
         # Perform further checks or actions related to XSS protection
     else:
-        print("\033[91m[-] X-XSS-Protection header not found.\033[0m")
+        print(Fore.RED+ "[-] X-XSS-Protection header not found.")
         print("Reference: [OWASP XSS (Cross Site Scripting) Prevention Cheat Sheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)")
 
     # X-Frame-Options Scanner
     if 'X-Frame-Options' in headers:
-        print("[+] X-Frame-Options header found.")
+        print(Fore.BLUE+" [+] X-Frame-Options header found. ")
         # Perform further checks or actions related to clickjacking protection
     else:
-        print("\033[91m[-] X-Frame-Options header not found.\033[0m")
+        print(Fore.RED+" [ - ] X-Frame-Options header not found.")
         print("Reference: [OWASP Clickjacking Defense Cheat Sheet](https://owasp.org/www-community/attacks/Clickjacking)")
 
     # HSTS (Strict-Transport-Security) Scanner
     if 'Strict-Transport-Security' in headers:
-        print("[+] Strict-Transport-Security header found.")
+        print(Fore.BLUE+" [+] Strict-Transport-Security header found. ")
         # Perform further checks or actions related to HSTS
     else:
-        print("\033[91m[-] Strict-Transport-Security header not found.\033[0m")
+        print(Fore.RED+ "[-] Strict-Transport-Security header not found.")
         print("Reference: [OWASP Transport Layer Protection Cheat Sheet](https://owasp.org/www-project-secure-headers/#http-strict-transport-security-hsts)")
 
     # CORS (Cross-Origin Resource Sharing) Scanner
     if 'Access-Control-Allow-Origin' in headers:
-        print("[+] CORS headers found.")
+        print(Fore.BLUE+" [+] CORS headers found.")
         # Perform further checks or actions related to CORS configuration
     else:
-        print("\033[91m[-] CORS headers not found.\033[0m")
+        print(Fore.RED+ "[-] CORS headers not found.")
         print("Reference: [OWASP Cross-Origin Resource Sharing (CORS) Cheat Sheet](https://owasp.org/www-community/attacks/CORS_OriginHeaderScrutiny)")
      # JWT (JSON Web Token) Authentication Scanner suggested by Ankit Bhusal
     if 'Authorization' in headers and 'Bearer' in headers['Authorization']:
-        print("[+] JWT (JSON Web Token) authentication found.")
+        print(Fore.BLUE+" [+] JWT (JSON Web Token) authentication found.")
         print("Reference: [OWASP JSON Web Token Cheat Sheet] (https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_Cheat_Sheet.html)")
         # Perform further checks or actions related to JWT authentication
     
     else:
-        print("\033[91m[-] JWT (JSON Web Token) authentication not found.\033[0m")
+        print(Fore.RED+ "[-] JWT (JSON Web Token) authentication not found.")
     #scan_csp(url=url)
     # Members may add other headers scanners...
     # Add more scanners for additional security headers as needed
