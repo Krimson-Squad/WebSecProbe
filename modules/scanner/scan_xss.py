@@ -67,7 +67,7 @@ def scan_xss(url, timeout=30, payload_file="resources/xss.txt"):
 
         return retval
 
-    print(f"++++++++++++ Scanning for XSS ++++++++++++")
+    print(Fore.GREEN+"++++++++++++ Scanning for XSS vuln. in URL ++++++++++++")
     payloads = load_payloads(PAYLOADS_FILE)
     scan_page(url, payloads=payloads)
 
